@@ -1,6 +1,6 @@
 {
   "name": "callbag-buffer-until",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "👜 Callbag operator that buffers the stream until another stream emits a value.",
   "main": "dist/callbag-buffer-until.js",
   "module": "dist/callbag-buffer-until.es.js",
