@@ -1,0 +1,62 @@
+{
+  "name": "callbag-buffer-until",
+  "version": "0.0.0",
+  "description": "👜 Callbag operator that buffers the stream until another stream emits a value.",
+  "main": "dist/callbag-buffer-until.js",
+  "module": "dist/callbag-buffer-until.es.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "clean": "rimraf dist",
+    "format": "lint-staged",
+    "lint": "eslint -c .eslintrc.json src",
+    "prepare": "run-s clean build test",
+    "precommit": "run-s validate format",
+    "preversion": "npm run validate",
+    "test": "jest",
+    "validate": "run-p lint build test"
+  },
+  "keywords": [
+    "callbag",
+    "callbags"
+  ],
+  "homepage": "https://github.com/jane/callbag-buffer-until",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jane/callbag-buffer-until.git"
+  },
+  "bugs": "https://github.com/jane/callbag-buffer-until/issues",
+  "author": "Jeremy Lund <jeremy.r.lund@gmail.com> (https://github.com/lund0n)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-jest": "^22.4.3",
+    "babel-preset-env": "^1.7.0",
+    "callbag-for-each": "^1.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-jane": "^2.0.3",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jest": "^21.15.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-unicorn": "^4.0.3",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "lint-staged": "^7.1.0",
+    "npm-run-all": "^4.1.3",
+    "prettier": "^1.12.1",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.59.0",
+    "rollup-plugin-babel": "^3.0.4"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
