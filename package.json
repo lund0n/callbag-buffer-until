@@ -22,12 +22,12 @@
     "callbag",
     "callbags"
   ],
-  "homepage": "https://github.com/jane/callbag-buffer-until",
+  "homepage": "https://github.com/lund0n/callbag-buffer-until",
   "repository": {
     "type": "git",
-    "url": "git@github.com:jane/callbag-buffer-until.git"
+    "url": "git@github.com:lund0n/callbag-buffer-until.git"
   },
-  "bugs": "https://github.com/jane/callbag-buffer-until/issues",
+  "bugs": "https://github.com/lund0n/callbag-buffer-until/issues",
   "author": "Jeremy Lund <jeremy.r.lund@gmail.com> (https://github.com/lund0n)",
   "license": "MIT",
   "devDependencies": {
