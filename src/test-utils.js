@@ -5,7 +5,7 @@ export const createSource = () => {
     if (!active) return
     if (type === 0) {
       sink = data
-      sink(0, (t) => {
+      sink(0, t => {
         if (t === 2) {
           active = false
         }
