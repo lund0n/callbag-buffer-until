@@ -1,1 +1,5 @@
-module.exports = require('eslint-config-jane/prettier')
+module.exports = {
+  semi: false,
+  singleQuote: true,
+  trailingComma: 'all',
+}

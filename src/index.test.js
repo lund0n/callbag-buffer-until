@@ -1,10 +1,10 @@
-/* eslint-env */
+/* eslint-env jest */
 import forEach from 'callbag-for-each'
 import { createSource } from './test-utils'
 import bufferUntil from '.'
 
-const pushToSource = (source, items) => items.forEach((item) => source(1, item))
-const getItemsFrom = (mockFn) => mockFn.mock.calls.map(([item]) => item)
+const pushToSource = (source, items) => items.forEach(item => source(1, item))
+const getItemsFrom = mockFn => mockFn.mock.calls.map(([item]) => item)
 
 test('pushes data through when notified before first item', () => {
   const items = ['Milk', 'Eggs', 'Butter']

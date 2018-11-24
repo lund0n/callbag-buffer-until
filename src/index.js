@@ -1,6 +1,6 @@
-const bufferUntil = (notifier, { size = 100 } = {}) => (source) => (
+const bufferUntil = (notifier, { size = 100 } = {}) => source => (
   start,
-  sink
+  sink,
 ) => {
   const buffer = []
   if (start !== 0) {
@@ -22,7 +22,7 @@ const bufferUntil = (notifier, { size = 100 } = {}) => (source) => (
           notifierTalkback(2)
           const toFlush = buffer.slice()
           buffer.length = 0
-          toFlush.forEach((item) => sink(1, item))
+          toFlush.forEach(item => sink(1, item))
         }
       })
     }

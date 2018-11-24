@@ -10,53 +10,46 @@
   "scripts": {
     "build": "rollup -c",
     "clean": "rimraf dist",
-    "format": "lint-staged",
-    "lint": "eslint -c .eslintrc.json src",
+    "format": "prettier --write \"*.js\" \"src/*.js\"",
+    "lint": "eslint .",
     "prepare": "run-s clean build test",
-    "precommit": "run-s validate format",
+    "precommit": "lint-staged",
+    "prepush": "run-s validate",
     "preversion": "npm run validate",
     "test": "jest",
-    "validate": "run-p lint build test"
+    "validate": "run-p build test"
   },
   "keywords": [
     "callbag",
     "callbags"
   ],
-  "homepage": "https://github.com/jane/callbag-buffer-until",
+  "homepage": "https://github.com/lund0n/callbag-buffer-until",
   "repository": {
     "type": "git",
-    "url": "git@github.com:jane/callbag-buffer-until.git"
+    "url": "git@github.com:lund0n/callbag-buffer-until.git"
   },
-  "bugs": "https://github.com/jane/callbag-buffer-until/issues",
+  "bugs": "https://github.com/lund0n/callbag-buffer-until/issues",
   "author": "Jeremy Lund <jeremy.r.lund@gmail.com> (https://github.com/lund0n)",
   "license": "MIT",
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.3",
-    "babel-jest": "^22.4.3",
-    "babel-preset-env": "^1.7.0",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
     "callbag-for-each": "^1.0.1",
-    "eslint": "^4.19.1",
-    "eslint-config-jane": "^2.0.3",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-babel": "^5.1.0",
     "eslint-plugin-import": "^2.11.0",
-    "eslint-plugin-jest": "^21.15.1",
-    "eslint-plugin-prettier": "^2.6.0",
-    "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-unicorn": "^4.0.3",
-    "husky": "^0.14.3",
-    "jest": "^22.4.3",
-    "lint-staged": "^7.1.0",
+    "eslint-plugin-unicorn": "^6.0.1",
+    "husky": "^1.2.0",
+    "jest": "^23.6.0",
+    "lint-staged": "^8.1.0",
     "npm-run-all": "^4.1.3",
     "prettier": "^1.12.1",
     "rimraf": "^2.6.2",
-    "rollup": "^0.59.0",
-    "rollup-plugin-babel": "^3.0.4"
-  },
-  "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "git add"
-    ]
+    "rollup": "^0.67.3",
+    "rollup-plugin-babel": "^4.0.3"
   }
 }
